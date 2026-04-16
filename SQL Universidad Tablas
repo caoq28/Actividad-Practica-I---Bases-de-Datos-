@@ -1,4 +1,6 @@
+
 -- 1. Crear tabla de Categorías
+
 CREATE TABLE BookCategories (
     CategoryID SERIAL PRIMARY KEY,
     CategoryName VARCHAR(50) NOT NULL,
@@ -6,6 +8,7 @@ CREATE TABLE BookCategories (
 );
 
 -- 2. Crear tabla de Libros
+
 CREATE TABLE Books (
     BookID SERIAL PRIMARY KEY,
     Title VARCHAR(100) NOT NULL,
@@ -18,6 +21,7 @@ CREATE TABLE Books (
 );
 
 -- 3. Crear tabla de Usuarios
+
 CREATE TABLE Users (
     UserID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
@@ -27,6 +31,7 @@ CREATE TABLE Users (
 );
 
 -- 4. Crear tabla de Personal
+
 CREATE TABLE Staff (
     StaffID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
@@ -36,6 +41,7 @@ CREATE TABLE Staff (
 );
 
 -- 5. Crear tabla de Préstamos
+
 CREATE TABLE Loans (
     LoanID SERIAL PRIMARY KEY,
     UserID INT,
@@ -47,6 +53,7 @@ CREATE TABLE Loans (
 );
 
 -- 6. Crear tabla de Reservaciones
+
 CREATE TABLE Reservations (
     ReservationID SERIAL PRIMARY KEY,
     UserID INT,
