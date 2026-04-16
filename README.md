@@ -1,6 +1,6 @@
 # Actividad Practica I Bases de Datos 
 
--- Diseño de Consultas avanzadas SQL 
+-> Diseño de Consultas avanzadas SQL 
 
 Esta actividad tiene como objetivo el diseño y la implementación de consultas SQL avanzadas a partir de un modelo relacional correspondiente a una base de datos de biblioteca. Inicialmente, se trabajó con un esquema de base de datos que incluye entidades como usuarios, libros, préstamos, reservas y categorías. A partir de esta estructura, se desarrollaron diferentes tipos de consultas que abarcan el uso de subconsultas, operadores de conjunto, expresiones condicionales, funciones de agregación, así como distintas formas de combinación de tablas mediante JOIN (INNER, LEFT y RIGHT).
 
