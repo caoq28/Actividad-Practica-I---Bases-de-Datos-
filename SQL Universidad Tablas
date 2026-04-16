@@ -1,0 +1,58 @@
+-- 1. Crear tabla de Categorías
+CREATE TABLE BookCategories (
+    CategoryID SERIAL PRIMARY KEY,
+    CategoryName VARCHAR(50) NOT NULL,
+    Description TEXT
+);
+
+-- 2. Crear tabla de Libros
+CREATE TABLE Books (
+    BookID SERIAL PRIMARY KEY,
+    Title VARCHAR(100) NOT NULL,
+    Author VARCHAR(100) NOT NULL,
+    Genre VARCHAR(50),
+    PublicationYear INT,
+    AvailableCopies INT DEFAULT 0,
+    CategoryID INT,
+    CONSTRAINT fk_category FOREIGN KEY (CategoryID) REFERENCES BookCategories(CategoryID)
+);
+
+-- 3. Crear tabla de Usuarios
+CREATE TABLE Users (
+    UserID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100),
+    PhoneNumber VARCHAR(15)
+);
+
+-- 4. Crear tabla de Personal
+CREATE TABLE Staff (
+    StaffID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Role VARCHAR(50),
+    Email VARCHAR(100)
+);
+
+-- 5. Crear tabla de Préstamos
+CREATE TABLE Loans (
+    LoanID SERIAL PRIMARY KEY,
+    UserID INT,
+    BookID INT,
+    LoanDate DATE NOT NULL,
+    ReturnDate DATE,
+    CONSTRAINT fk_user_loan FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    CONSTRAINT fk_book_loan FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
+
+-- 6. Crear tabla de Reservaciones
+CREATE TABLE Reservations (
+    ReservationID SERIAL PRIMARY KEY,
+    UserID INT,
+    BookID INT,
+    ReservationDate DATE NOT NULL,
+    Status VARCHAR(20) DEFAULT 'active',
+    CONSTRAINT fk_user_res FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    CONSTRAINT fk_book_res FOREIGN KEY (BookID) REFERENCES Books(BookID)
+);
