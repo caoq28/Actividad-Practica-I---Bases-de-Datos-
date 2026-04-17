@@ -6,7 +6,7 @@ Esta actividad tiene como objetivo el diseño y la implementación de consultas 
 
 Las subconsultas permitieron obtener información específica a partir de condiciones anidadas, mientras que los operadores de conjunto facilitaron la comparación entre distintos conjuntos de datos, como los libros reservados frente a los prestados. Por su parte, las expresiones condicionales se utilizaron para clasificar información, como el estado de disponibilidad de los libros o la actividad de los usuarios.
 
-Asimismo, se implementaron consultas con funciones de agregación junto con las cláusulas GROUP BY y HAVING, lo cual permitió realizar análisis sobre los datos, como identificar categorías con mayor cantidad de libros o usuarios con múltiples reservas. El uso de JOINs fue fundamental para relacionar las distintas tablas y obtener información más completa y significativa.
+Asi mismo, se implementaron consultas con funciones de agregación junto con las cláusulas GROUP BY y HAVING, lo cual permitió realizar análisis sobre los datos, como identificar categorías con mayor cantidad de libros o usuarios con múltiples reservas. El uso de JOINs fue fundamental para relacionar las distintas tablas y obtener información más completa y significativa.
 
 Adicionalmente, se emplearon funciones especializadas para el manejo de cadenas de texto y funciones de fecha para calcular intervalos de tiempo, así como para identificar préstamos pendientes de devolución. Todo este proceso se llevó a cabo utilizando un gestor de base de datos, en este caso pgAdmin 4 con PostgreSQL, lo que permitió ejecutar y validar cada una de las consultas desarrolladas.
 
